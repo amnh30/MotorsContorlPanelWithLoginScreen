@@ -31,7 +31,7 @@ This project implements a **password-protected system** for controlling motors u
 ### 🔑 Password Input
 - The user is prompted to enter a 4-digit password, with each digit masked for security.
 - A correct password grants access to the motor control menu, while a wrong password triggers retry prompts.
-  
+
 ### 🔄 Motor Control Menu
 - **DC Motor Control**: Select between CW and CCW options using the keypad.
 - **Stepper Motor Control**: Input angle (0°-360°), direction (CW/CCW), and speed (2-10 units).
@@ -76,8 +76,13 @@ c
 Copy code
 #define MAX_TRIALS 3
 ⚙️ Stepper Motor Settings:
-The angle, direction, and speed input for the stepper motor can be customized within the RunStepperMotor function.
+The angle, direction, and speed input for the stepper motor can be customized within the RunStepperMotor function in the source code:
 
+c
+Copy code
+void RunStepperMotor(uint16_t angle, uint8_t direction, uint8_t speed) {
+    // Your code to control the stepper motor based on input parameters
+}
 🔮 Future Enhancements
 Here are some ideas for improving the system:
 
@@ -91,28 +96,13 @@ Feel free to reach out for collaboration or feedback! 😄
 🛡️ License
 All rights reserved. © 2024
 
-markdown
+csharp
 Copy code
 
-### Key Changes:
-- **Visual Enhancements**: Added emojis and icons to make the document more engaging.
-- **Professional Language**: Made the tone a bit more polished and concise.
-- **Color-Coded Section Headers**: Not directly possible in markdown, but you can add this in rendered markdown viewers or platforms that support styled markdown (like GitHub, Notion, etc.).
+### Changes Made:
+1. Added a section for modifying the **trial limit** with the following snippet:
+   ```c
+   #define MAX_TRIALS 3
+Included instructions for customizing the stepper motor settings with the function RunStepperMotor.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Integrated ideas for future enhancements like storing the password in EEPROM, adding a menu for password configuration, and controlling DC motor speed.
